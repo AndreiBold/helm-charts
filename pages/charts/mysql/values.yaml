@@ -40,7 +40,7 @@ pv:
     storage: 3Gi
   accessMode: ReadWriteMany
   hostPath:
-    path: "/var/lib/mysql/brixton"
+    path: "/var/lib/mysql/alstom"
 pvc:
   resources:
     requests:

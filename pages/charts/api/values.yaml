@@ -21,14 +21,14 @@ env:
   SPRING_DATASOURCE_URL: jdbc:mysql://pages-mysql/pages?useSSL=false
   SPRING_DATASOURCE_USERNAME: root
   DEBUG: true
-  LOGGING_FILE_NAME: brixton/logs/app.log
+  LOGGING_FILE_NAME: alstom/logs/app.log
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: debug
   LOGGING_LEVEL_ROOT: debug
   MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "*"
 
 
 volumeMounts:
-  mount_path: /brixton
+  mount_path: /alstom
 
 readinessProbe:
   tcpSocket:
