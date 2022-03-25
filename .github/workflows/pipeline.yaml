@@ -21,11 +21,11 @@ jobs:
       - name: Install Kubectl
         run: |
           ls
-          bash ./scripts/install-kubectl.sh
+          bash .~/workspace/helm-charts/scripts/install-kubectl.sh
 
       - name: Helm Testing
         run: |
-          bash ./scripts/helm-test.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
+          bash .~/workspace/helm-charts/scripts/helm-test.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
 
   deploy-to-staging:
     runs-on: ubuntu-latest
@@ -47,10 +47,10 @@ jobs:
       - name: Check kubectl
         run: |
           ls
-          bash ./scripts/install-kubectl.sh
+          bash .~/workspace/helm-charts/scripts/install-kubectl.sh
       - name: Install Helm3
         run: |
-          bash ./scripts/install-helm.sh
+          bash .~/workspace/helm-charts/scripts/install-helm.sh
       - name: Deploy to staging
         run: |
-          bash ./scripts/deploy.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
+          bash .~/workspace/helm-charts/scripts/deploy.sh ${{ secrets.STAGING_NAMESPACE }} ${{ secrets.RELEASE_NAME }}
